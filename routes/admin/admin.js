@@ -7,9 +7,11 @@ const User = require("../../models/User");
 const Insurance = require("../../models/Insurance");
 
 // Get a list of all insurances in the system
-router.get("/:email", async (req, res) => {
+router.post("/list", async (req, res) => {
+  const { email } = req.body;
+
   try {
-    let userExists = await User.findOne({ email: req.params.email });
+    let userExists = await User.findOne({ email: email });
 
     if (userExists) {
       if (admins.includes(email)) {
