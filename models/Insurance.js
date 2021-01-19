@@ -22,17 +22,15 @@ const InsuranceSchema = new mongoose.Schema({
     required: true,
   },
   price: {
-    type: Decimal128,
+    type: Number,
     required: true,
   },
   postedOn: {
     type: Date,
-    default: Date.now,
     required: true,
   },
   updatedOn: {
     type: Date,
-    default: Date.now,
     required: true,
   },
 });

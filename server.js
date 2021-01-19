@@ -13,7 +13,7 @@ databaseConnection();
 app.use(
   cors({
     origin: "*",
-    methods: "GET,PATCH,POST",
+    methods: "POST",
     preflightContinue: true,
     optionsSuccessStatus: 204,
   })
@@ -23,7 +23,8 @@ app.use(
 app.use(express.json({ extended: false }));
 
 // API Routes
-//app.use("/api/admin", require("./routes/admin/admin"));
+app.use("/api/user", require("./routes/user/user"));
+app.use("/api/admin", require("./routes/admin/admin"));
 
 // Hosted Port or Localhost
 const PORT = process.env.PORT || 8080;

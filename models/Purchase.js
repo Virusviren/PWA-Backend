@@ -68,7 +68,7 @@ const PurchaseSchema = new mongoose.Schema({
     required: true,
   },
   total: {
-    type: Decimal128,
+    type: Number,
     required: true,
   },
 });
