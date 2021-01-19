@@ -13,7 +13,7 @@ databaseConnection();
 app.use(
   cors({
     origin: "*",
-    methods: "POST",
+    methods: "GET,PATCH,DELETE,POST",
     preflightContinue: true,
     optionsSuccessStatus: 204,
   })
