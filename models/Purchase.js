@@ -15,13 +15,13 @@ const PurchaseSchema = new mongoose.Schema({
     required: true,
   },
   validTill: {
-    type: Date,
-    default: Date.now,
+    type: String,
     required: true,
   },
   transactionId: {
     type: String,
     required: true,
+    unique: true,
   },
   fullName: {
     type: String,

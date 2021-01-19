@@ -23,6 +23,7 @@ app.use(
 app.use(express.json({ extended: false }));
 
 // API Routes
+app.use("/api/guest", require("./routes/guest/guest"));
 app.use("/api/user", require("./routes/user/user"));
 app.use("/api/admin", require("./routes/admin/admin"));
 
