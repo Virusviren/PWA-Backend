@@ -118,7 +118,7 @@ router.post("/buy", async (req, res) => {
 });
 
 // Get a list of all previous purchases
-router.get("/", async (req, res) => {
+router.post("/purchases", async (req, res) => {
   const { email } = req.body;
 
   try {
