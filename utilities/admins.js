@@ -1,3 +1,5 @@
-const admins = ["11kaustubhpadwal@gmail.com"];
+const admins = [
+  //"11kaustubhpadwal@gmail.com"
+];
 
 module.exports = admins;
